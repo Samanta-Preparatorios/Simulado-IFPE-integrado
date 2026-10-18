@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,432 +5,115 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simulado IFPE Integrado 2027 | Professora Samanta</title>
 <style>
-:root {
-  --orange: #f58220;
-  --black: #171717;
-  --cream: #fff8ef;
-  --green: #27805a;
-  --red: #b93a35;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: #f3f4f6;
-  color: #222;
-  font: 16px/1.55 Arial, sans-serif;
-}
-header {
-  background: #050505;
-  color: white;
-  padding: 22px 16px;
-  border-bottom: 6px solid var(--orange);
-}
-.head {
-  max-width: 1050px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  flex-wrap: wrap;
-}
-.logo { width: min(100%, 390px); height: auto; }
-h1 { font-size: clamp(1.5rem, 3vw, 2.4rem); }
-main { max-width: 1050px; margin: 24px auto; padding: 0 14px; }
-.panel, .question {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 16px 0;
-  box-shadow: 0 4px 18px #0000000d;
-}
-.hero { border-top: 5px solid var(--orange); }
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 10px;
-}
-.stat {
-  background: #fff7ed;
-  padding: 14px;
-  border-radius: 10px;
-}
-.stat b {
-  display: block;
-  font-size: 1.4rem;
-  color: #a64e00;
-}
-.notice {
-  background: #f5f8ff;
-  border-left: 4px solid #3764a8;
-  padding: 12px;
-}
-.section-title {
-  background: var(--black);
-  color: white;
-  padding: 12px 16px;
-  border-radius: 9px;
-  margin-top: 25px;
-}
-.topic {
-  color: #8a4b0b;
-  font-size: .8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.option {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-  margin: 6px 0;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.option:hover {
-  background: var(--cream);
-  border-color: var(--orange);
-}
-.option input { accent-color: var(--orange); }
-button {
-  border: 0;
-  background: var(--orange);
-  color: #171717;
-  padding: 12px 18px;
-  border-radius: 9px;
-  font-weight: bold;
-  cursor: pointer;
-}
-button.secondary { background: #222; color: white; }
-.actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0; }
-#results { display: none; }
-.comment {
-  display: none;
-  background: #f0fdf4;
-  border-left: 4px solid var(--green);
-  padding: 12px;
-  margin-top: 10px;
-}
-.comment.wrong {
-  background: #fff1f0;
-  border-color: var(--red);
-}
-.correctline { color: var(--green); font-weight: bold; }
-.incorrectline { color: var(--red); font-weight: bold; }
-.resultgrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-.chartbox { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-canvas { max-width: 260px; }
-.swatch {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 7px;
-}
-.bar {
-  height: 12px;
-  background: #eee;
-  border-radius: 99px;
-  overflow: hidden;
-}
-.bar span { display: block; height: 100%; background: var(--orange); }
-footer { text-align: center; padding: 25px; color: #666; }
+:root{--orange:#f58220;--ink:#171717;--paper:#fff;--muted:#626262;--line:#e5e7eb;--green:#26734d;--red:#a83232;--blue:#3577b8}
+*{box-sizing:border-box}body{margin:0;background:#f3f4f6;color:#222;font:16px/1.55 Arial,Helvetica,sans-serif}
+header{background:#050505;color:white;border-bottom:6px solid var(--orange);padding:22px 16px}
+.head{max-width:1080px;margin:auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.logo{width:min(100%,400px);height:auto;object-fit:contain}h1{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.15;margin:.3em 0}
+main{max-width:1080px;margin:24px auto;padding:0 14px}.panel,.question{background:white;border-radius:14px;padding:20px;margin:16px 0;box-shadow:0 4px 18px #0000000b}
+.hero{border-top:5px solid var(--orange)}h2{line-height:1.2}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.stat{background:#fff5e9;border-radius:10px;padding:12px}.stat b{display:block;font-size:1.5rem;color:#a95000}
+.notice{background:#eef5ff;border-left:4px solid var(--blue);padding:12px;margin:15px 0}
+.section-title{background:var(--ink);color:white;padding:10px 16px;border-left:6px solid var(--orange);border-radius:9px;margin-top:26px}
+.topic{font-size:.78rem;color:#8a4b0b;text-transform:uppercase;font-weight:700;letter-spacing:.04em}
+.question h3{font-size:1.08rem;margin:.1em 0 .55em}.prompt{margin:0 0 1em}.visual{background:#fffaf3;border:1px solid #f0dfca;border-radius:10px;padding:14px;margin:14px 0;overflow-x:auto}
+.visual table{border-collapse:collapse;width:100%;background:white}.visual th,.visual td{border:1px solid #d5d5d5;padding:8px;text-align:center}.visual th{background:#ffe4c7}
+.option{display:flex;align-items:flex-start;gap:10px;padding:10px;margin:7px 0;border:1px solid var(--line);border-radius:9px;cursor:pointer}
+.option:hover{background:#fff9f1;border-color:var(--orange)}.option input{margin-top:5px;accent-color:var(--orange);flex-shrink:0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}button{border:0;border-radius:9px;background:var(--orange);color:#171717;padding:12px 18px;font-weight:bold;font-size:1rem;cursor:pointer}button.secondary{background:#222;color:white}button:hover{filter:brightness(.96)}
+.comment{display:none;background:#effaf2;border-left:4px solid var(--green);padding:12px;margin-top:12px;border-radius:4px}.comment.wrong{background:#fff1f0;border-color:var(--red)}
+.good{font-weight:bold;color:var(--green)}.bad{font-weight:bold;color:var(--red)}#results{display:none}
+.resultgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.chartbox{display:flex;align-items:center;gap:15px;flex-wrap:wrap}canvas{max-width:230px;width:100%}.swatch{display:inline-block;width:12px;height:12px;margin-right:7px}
+.bar{height:12px;background:#eee;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;background:var(--orange)}.barrow{display:grid;grid-template-columns:95px 1fr 38px;align-items:center;gap:8px;margin:8px 0;font-size:.9rem}.track{height:13px;background:#e9e9e9;border-radius:10px;overflow:hidden}.track i{display:block;height:100%;background:var(--orange)}
+.poster{max-width:460px;margin:auto;text-align:center;background:#102e2b;color:white;padding:18px;border:5px solid #f58220;border-radius:8px}.poster-top{font-size:1.35rem;font-weight:900;letter-spacing:.03em;color:#ffe18b}.poster p{font-size:1.08rem}.poster-drop{font-size:2.3rem}.poster.blue{background:#eaf5ff;color:#173d60}.poster.green{background:#eaf8e9;color:#20552c}
+.receipt,.noticecard,.clipping,.recipe,.document{background:white;border:2px solid #333;padding:14px;max-width:500px;margin:auto}.receipt hr{border:0;border-top:1px dashed #888}.bigtime{font-size:2rem;color:#a95000;font-weight:bold}.weather{text-align:center;font-size:2rem}.weather small{font-size:.9rem}.rain{color:#3577b8}
+.fraction{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 10px;font-weight:bold}.fraction hr{width:28px;margin:3px auto}.formula{text-align:center;font-size:1.35rem;font-weight:bold;letter-spacing:.04em}
+.growth,.ratio,.scorecards,.flowmap,.foodchain,.immune,.stages,.actioncards,.coldwar,.wordbuild{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}.growth span,.ratio span,.foodchain span,.immune div,.stages span,.flowmap span{padding:10px;background:#fff;border:1px solid #e6c79f;border-radius:8px;font-weight:bold}.growth small,.visual small{display:block;width:100%;text-align:center;color:#666}
+.squaregrid{border:2px solid #26734d;padding:10px;line-height:1.4;color:#26734d;text-align:center}.ruler{display:flex;align-items:center;gap:10px}.ruler div{height:8px;background:repeating-linear-gradient(90deg,#555 0 2px,transparent 2px 12px);flex:1}
+.ratio b{color:#a95000}.scorecards b{background:#eaf3ff;padding:12px 18px;border-radius:8px}.rectangle{width:240px;height:90px;border:2px solid #3577b8;display:flex;align-items:center;justify-content:space-around;position:relative;background:#eaf3ff}.rectangle span:first-child{position:absolute;top:-25px}.rectangle span:last-child{position:absolute;right:-45px;top:35px}.square{width:120px;height:120px;border:2px solid #3577b8;background:#eaf3ff;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:4px}
+.triangle svg{width:100%;max-width:300px;display:block;margin:auto}.textsample{background:white;border-left:4px solid #f58220;padding:12px;font-size:1.05rem}mark{background:#ffe18b;padding:1px 3px}.quote{font-size:1.25rem;text-align:center;font-style:italic}.quote small{display:block;font-size:.8rem;font-style:normal;margin-top:8px;color:#666}
+.slogan{text-align:center;font-size:1.4rem;font-weight:900;color:#235a3b}.slogan span{color:#f58220}.wordbuild span,.wordbuild strong{padding:8px;background:white;border:1px solid #ddd;border-radius:6px}.sun{text-align:center}.bars{height:140px;display:flex;align-items:flex-end;gap:7px;border-bottom:1px solid #555;padding:8px}.bars span{position:relative;flex:1;min-width:15px;background:#3577b8;border-radius:4px 4px 0 0}.bars i{position:absolute;bottom:-22px;left:0;font-size:.7rem;font-style:normal;color:#444}.bars+small{margin-top:24px}
+.foodchain b,.immune b,.stages span{color:#a95000}.cellwall{position:relative;background:#d7f0d1;border:7px solid #4d8a48;border-radius:35px;min-height:150px;padding:20px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}.nucleus,.chloroplast,.vacuole{padding:10px;border-radius:50%;font-size:.85rem}.nucleus{background:#b8a6e8}.chloroplast{background:#7ccf72}.vacuole{background:#b7e3f6}.punnett{max-width:300px;margin:auto}.mothrow{font-size:2rem;letter-spacing:.3em;text-align:center}.earth{text-align:center}.earthcircle{width:110px;height:110px;margin:auto;border-radius:50%;background:linear-gradient(90deg,#1c5c9b 50%,#ffe29a 50%);display:grid;place-items:center;font-size:2rem;border:2px solid #333}
+.mapline{display:flex;align-items:center;justify-content:space-around;gap:10px;flex-wrap:wrap}.maproad{height:6px;background:#3577b8;flex:1;min-width:60px}.city .buildings{display:flex;align-items:flex-end;gap:8px;height:70px}.buildings i{display:block;width:35px;background:#a8c8e8;height:50px;border:2px solid #356db5}.buildings i:nth-child(2){height:68px}.buildings i:nth-child(3){height:40px}.street{background:#ddd;padding:10px;text-align:center}.solar{text-align:center}.sunicon{font-size:2rem;color:#c77b00}.panelgrid{display:inline-block;background:#b8d7f7;padding:12px;margin:8px;border:2px solid #3577b8}.timeline{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.timeline div{height:4px;background:#f58220;flex:1;min-width:60px}.timeline small{width:100%;text-align:center}.document .stamp{border:2px dashed #26734d;color:#26734d;text-align:center;padding:8px;font-weight:bold}.coldwar div{padding:12px;background:#eaf3ff;border-radius:8px;text-align:center}.coldwar small{display:block}.newspaper{background:#f9f7ef;border:1px solid #777;padding:15px;font-family:Georgia,serif}.newspaper p{background:#ddd;padding:5px}
+footer{text-align:center;padding:25px;color:#666}
+@media(max-width:600px){.panel,.question{padding:15px}.barrow{grid-template-columns:80px 1fr 32px}.logo{width:100%}}
 </style>
 </head>
-
 <body>
-<header>
-  <div class="head">
-    <!-- Coloque a logo na mesma pasta do HTML -->
-    <img class="logo" src="Logo preparatorio1.jpeg"
-         alt="Curso Preparatório Professora Samanta">
-    <div>
-      <h1>Simulado IFPE Integrado 2027</h1>
-      <p>Ensino Médio • Questões contextualizadas</p>
-      <p>Correção comentada e estudo orientado</p>
-    </div>
-  </div>
-</header>
-
+<header><div class="head">
+<img class="logo" src="data:image/webp;base64,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" alt="Logo Curso Preparatório Professora Samanta">
+<div><h1>Simulado IFPE Integrado 2027</h1><p>60 questões contextualizadas • Ensino Fundamental</p><p>Correção comentada e diagnóstico de aprendizagem</p></div>
+</div></header>
 <main>
 <section class="panel hero">
-  <h2>Orientações para a prova</h2>
-  <p>
-    Este simulado foi elaborado com base no conteúdo programático
-    do edital do IFPE 2027.1. As questões são autorais e voltadas
-    à preparação para a seleção dos cursos técnicos integrados.
-  </p>
-
-  <div class="stats">
-    <div class="stat"><b>60</b>Questões</div>
-    <div class="stat"><b>20</b>Matemática</div>
-    <div class="stat"><b>20</b>Português</div>
-    <div class="stat"><b>20</b>Conhecimentos Gerais</div>
-  </div>
-
-  <div class="notice">
-    <b>Atenção:</b> o edital prevê 30 questões para os cursos
-    integrados selecionados por prova. Este simulado foi ampliado
-    para 60 questões, conforme a proposta de revisão.
-  </div>
-
-  <h3>Como responder</h3>
-  <ul>
-    <li>Leia atentamente os enunciados e os recursos visuais.</li>
-    <li>Marque apenas uma alternativa por questão.</li>
-    <li>Responda a todas as questões antes de consultar o gabarito.</li>
-    <li>Ao terminar, clique em “Corrigir simulado”.</li>
-  </ul>
+<h2>Orientações para a prova</h2>
+<p>Este simulado autoral foi elaborado com base no <b>Anexo G — Assuntos da Prova</b> do Edital nº 41/2026, para cursos técnicos integrados ao Ensino Médio. As questões usam situações do cotidiano, cartazes, tabelas, gráficos e esquemas didáticos.</p>
+<div class="stats"><div class="stat"><b>60</b>questões</div><div class="stat"><b>20</b>Matemática</div><div class="stat"><b>20</b>Língua Portuguesa</div><div class="stat"><b>20</b>Conhecimentos Gerais</div></div>
+<div class="notice"><b>Importante:</b> o edital oficial prevê 30 questões para cursos integrados selecionados por prova: 10 de Língua Portuguesa, 10 de Matemática e 10 de Conhecimentos Gerais. Este simulado foi ampliado para 60 questões (20 por área) para oferecer mais prática; portanto, não reproduz a quantidade oficial.</div>
+<ul><li>Leia o enunciado e observe atentamente os elementos visuais.</li><li>Marque uma única alternativa por questão.</li><li>Faça a prova antes de consultar os comentários.</li><li>Ao finalizar, clique em <b>Corrigir simulado</b> para ver o resultado e o plano de revisão.</li></ul>
+<p><b>Tempo sugerido para este treino ampliado:</b> 3 horas. É uma sugestão de prática, não uma alteração do edital.</p>
 </section>
-
 <div id="questions"></div>
-
-<div class="actions">
-  <button onclick="grade()">Corrigir simulado</button>
-  <button class="secondary" onclick="clearAll()">Limpar respostas</button>
-</div>
-
+<div class="actions"><button onclick="grade()">Corrigir simulado</button><button class="secondary" onclick="clearAll()">Limpar respostas</button></div>
 <section id="results" class="panel">
-  <h2>Seu resultado</h2>
-  <p id="greeting"></p>
-
-  <div class="stats">
-    <div class="stat"><b id="totalScore">0/60</b>Acertos</div>
-    <div class="stat"><b id="percent">0%</b>Percentual</div>
-    <div class="stat"><b id="answered">0/60</b>Respondidas</div>
-  </div>
-
-  <div class="resultgrid">
-    <div>
-      <h3>Distribuição dos acertos</h3>
-      <div class="chartbox">
-        <canvas id="pie" width="260" height="260"></canvas>
-        <div id="legend"></div>
-      </div>
-    </div>
-    <div>
-      <h3>Desempenho por área</h3>
-      <div id="areaResults"></div>
-    </div>
-  </div>
-
-  <h3>Conteúdos com mais facilidade</h3>
-  <div id="strengths"></div>
-
-  <h3>Conteúdos para revisar</h3>
-  <div id="weaknesses"></div>
-
-  <h3>Estudo orientado</h3>
-  <div id="studyPlan"></div>
-
-  <h3>Gabarito comentado</h3>
-  <p>As explicações aparecem abaixo de cada questão.</p>
+<h2>Seu diagnóstico de aprendizagem</h2><p id="greeting"></p>
+<div class="stats"><div class="stat"><b id="totalScore">0/60</b>Acertos</div><div class="stat"><b id="percent">0%</b>Percentual</div><div class="stat"><b id="answered">0/60</b>Respondidas</div></div>
+<div class="resultgrid"><div><h3>Percentual de acertos por área</h3><div class="chartbox"><canvas id="pie" width="230" height="230"></canvas><div id="legend"></div></div><small>O gráfico compara a participação de cada área nos acertos totais.</small></div><div><h3>Desempenho por disciplina</h3><div id="areaResults"></div></div></div>
+<h3>Conteúdos com mais facilidade</h3><div id="strengths"></div><h3>Conteúdos para revisar</h3><div id="weaknesses"></div><h3>Estudo orientado</h3><div id="studyPlan"></div>
+<h3>Gabarito comentado</h3><p>As respostas corretas e as explicações aparecem logo abaixo de cada questão.</p>
 </section>
 </main>
-
-<footer>
-  Curso Preparatório Professora Samanta<br>
-  Simulado autoral de preparação para o IFPE Integrado 2027.1
-</footer>
-
+<footer>Curso Preparatório Professora Samanta • Material autoral de estudo • IFPE Integrado 2027.1</footer>
 <script>
-// Insira aqui o banco completo das 60 questões.
-// Cada questão deve conter:
-// area, topic, text, options, answer e explanation.
-//
-// Exemplo de estrutura:
-const qs = [
-  {
-    area: "Matemática",
-    topic: "Porcentagem",
-    text: "Uma campanha arrecadou 240 kg de alimentos. "
-        + "Se 35% foram destinados a uma instituição, "
-        + "quantos quilogramas foram enviados?",
-    options: ["72 kg", "84 kg", "96 kg", "108 kg"],
-    answer: 1,
-    explanation: "35% de 240 = 0,35 × 240 = 84 kg."
-  }
-];
-
-// As funções abaixo fazem a correção e o diagnóstico.
-// Para usar as 60 questões, mantenha o banco completo
-// da versão integral do arquivo disponibilizado acima.
-
-const areas = [
-  "Matemática",
-  "Português",
-  "Conhecimentos Gerais"
-];
-const colors = ["#f58220", "#3577b8", "#27805a"];
-
-const root = document.getElementById("questions");
-
-function renderQuestions() {
-  let html = "";
-  areas.forEach(area => {
-    html += `<div class="section-title"><h2>${area}</h2></div>`;
-    qs.forEach((q, i) => {
-      if (q.area !== area) return;
-      html += `
-        <article class="question" id="q${i}">
-          <div class="topic">${q.topic} • Questão ${i + 1}</div>
-          <h3>${i + 1}. ${q.text}</h3>
-          ${q.options.map((op, j) => `
-            <label class="option">
-              <input type="radio" name="q${i}" value="${j}">
-              <span>${String.fromCharCode(65 + j)}) ${op}</span>
-            </label>
-          `).join("")}
-          <div class="comment" id="c${i}"></div>
-        </article>`;
-    });
-  });
-  root.innerHTML = html;
+const qs = [{"area":"Matemática","topic":"Porcentagem","text":"A associação de moradores de Igarassu arrecadou R$ 2.400 para comprar livros. O gráfico mostra como o dinheiro será dividido. Quanto será destinado aos livros de Matemática?","visual":"<div class=\"visual\"><b>Distribuição do orçamento</b><div class=\"barrow\"><span>Matemática</span><div class=\"track\"><i style=\"width:35%\"></i></div><b>35%</b></div><div class=\"barrow\"><span>Português</span><div class=\"track\"><i style=\"width:25%;background:#3577b8\"></i></div><b>25%</b></div><div class=\"barrow\"><span>Ciências</span><div class=\"track\"><i style=\"width:40%;background:#27805a\"></i></div><b>40%</b></div></div>","options":["R$ 720","R$ 840","R$ 960","R$ 1.040"],"answer":1,"explanation":"Calculamos 35% de 2.400: 0,35 × 2.400 = R$ 840."},{"area":"Matemática","topic":"Regra de três","text":"Uma equipe de estudantes organiza uma horta. Se 6 estudantes plantam 180 mudas em um turno, mantendo o mesmo ritmo, quantas mudas 10 estudantes plantam no mesmo período?","visual":"","options":["240","270","300","360"],"answer":2,"explanation":"A relação é diretamente proporcional: 180 ÷ 6 = 30 mudas por estudante; 10 × 30 = 300."},{"area":"Matemática","topic":"Frações","text":"Em uma campanha, foram recolhidos 3/8 de tonelada de papel pela manhã e 1/4 de tonelada à tarde. Qual foi a quantidade total recolhida?","visual":"","options":["4/12 t","5/8 t","1/2 t","7/8 t"],"answer":1,"explanation":"Usando denominador comum: 1/4 = 2/8; então 3/8 + 2/8 = 5/8 de tonelada."},{"area":"Matemática","topic":"Números decimais","text":"Uma estudante comprou 2,5 m de fita por R$ 3,80 o metro. Quanto pagou pela fita?","visual":"","options":["R$ 6,30","R$ 8,50","R$ 9,50","R$ 10,20"],"answer":2,"explanation":"Multiplicamos 2,5 × 3,80 = 9,50. O total é R$ 9,50."},{"area":"Matemática","topic":"Potenciação","text":"Uma colônia começa com 5 microrganismos e dobra de tamanho a cada hora. Se esse padrão se mantiver, quantos microrganismos haverá após quatro duplicações completas?","visual":"","options":["20","40","64","80"],"answer":3,"explanation":"A quantidade é 5 × 2⁴ = 5 × 16 = 80."},{"area":"Matemática","topic":"Raiz quadrada","text":"Uma escola organizará 144 mudas em um canteiro quadrado, com o mesmo número de mudas em cada fileira e em cada coluna. Quantas mudas ficarão em cada fileira?","visual":"","options":["10","11","12","14"],"answer":2,"explanation":"O lado do arranjo quadrado é √144 = 12 mudas."},{"area":"Matemática","topic":"Expressões numéricas","text":"Para calcular a pontuação de um desafio, a turma usa a expressão 18 + 4 × (7 − 3)² ÷ 8. Qual é o resultado?","visual":"","options":["20","24","26","34"],"answer":2,"explanation":"Parênteses: 4; potência: 16; multiplicação e divisão da esquerda para a direita: 4 × 16 ÷ 8 = 8; por fim, 18 + 8 = 26."},{"area":"Matemática","topic":"Medidas de comprimento","text":"Um mapa de trilha informa que o percurso tem 2,35 km. Quantos metros correspondem a essa distância?","visual":"","options":["235 m","2.035 m","2.350 m","23.500 m"],"answer":2,"explanation":"Como 1 km = 1.000 m, temos 2,35 × 1.000 = 2.350 m."},{"area":"Matemática","topic":"Proporção","text":"Uma receita de suco usa 3 copos de concentrado para 8 copos de água. Mantendo a proporção, quantos copos de água são necessários para 9 copos de concentrado?","visual":"","options":["16","18","21","24"],"answer":3,"explanation":"O concentrado foi multiplicado por 3; a água também: 8 × 3 = 24 copos."},{"area":"Matemática","topic":"Divisão proporcional","text":"Duas equipes dividirão um prêmio de R$ 600 na razão 2:3, correspondente às quantidades de tarefas concluídas pela Equipe Verde e pela Equipe Azul, respectivamente. Quanto receberá a Equipe Azul?","visual":"","options":["R$ 240","R$ 300","R$ 360","R$ 400"],"answer":2,"explanation":"Cada parte vale 600 ÷ 5 = R$ 120. A equipe com 3 partes recebe 3 × 120 = R$ 360."},{"area":"Matemática","topic":"Regra de três composta","text":"Quatro impressoras iguais produzem 600 folhetos em 5 horas. No mesmo ritmo, quantos folhetos 6 impressoras produzem em 4 horas?","visual":"","options":["600","720","800","900"],"answer":1,"explanation":"A produção é proporcional a impressoras × horas: 600 × (6/4) × (4/5) = 720 folhetos."},{"area":"Matemática","topic":"Média aritmética","text":"Em quatro simulados, uma estudante acertou 24, 28, 30 e 26 questões. Qual foi a média de acertos?","visual":"","options":["26","27","27,5","28"],"answer":1,"explanation":"A média é (24 + 28 + 30 + 26) ÷ 4 = 108 ÷ 4 = 27."},{"area":"Matemática","topic":"Polinômios","text":"Uma gráfica calcula a área de um painel retangular de lados (x + 3) e (x + 2). Qual expressão representa essa área?","visual":"","options":["x² + 5x + 6","x² + 6","2x + 5","x² + x + 6"],"answer":0,"explanation":"A área é (x + 3)(x + 2) = x² + 2x + 3x + 6 = x² + 5x + 6."},{"area":"Matemática","topic":"Produtos notáveis","text":"Um pátio quadrado tem lado (x + 4) metros. Qual expressão representa sua área?","visual":"","options":["x² + 16","x² + 8x + 16","x² + 4x + 16","2x + 8"],"answer":1,"explanation":"(x + 4)² = x² + 2·x·4 + 4² = x² + 8x + 16."},{"area":"Matemática","topic":"Fatoração","text":"Considere a expressão algébrica x² − 25. Qual alternativa apresenta sua fatoração correta?","visual":"","options":["(x − 5)²","(x + 25)(x − 1)","(x − 5)(x + 5)","x(x − 25)"],"answer":2,"explanation":"É uma diferença de quadrados: x² − 5² = (x − 5)(x + 5)."},{"area":"Matemática","topic":"Equação do 1º grau","text":"A inscrição de uma corrida custa R$ 8, e cada quilômetro percorrido acrescenta R$ 3 ao valor pago. Sem outras taxas, uma participante pagou R$ 29. Quantos quilômetros percorreu?","visual":"","options":["5 km","6 km","7 km","9 km"],"answer":2,"explanation":"Montamos 8 + 3x = 29; então 3x = 21 e x = 7 km."},{"area":"Matemática","topic":"Sistema linear","text":"Na bilheteria de uma feira de ciências, 2 ingressos adultos e 1 ingresso estudantil custam R$ 31. Um ingresso adulto e 1 ingresso estudantil custam R$ 19. Qual é o preço de um ingresso adulto?","visual":"","options":["R$ 7","R$ 10","R$ 12","R$ 19"],"answer":2,"explanation":"Se A representa o preço do ingresso adulto e E o do estudantil, temos 2A + E = 31 e A + E = 19. Subtraindo a segunda equação da primeira, obtemos A = 31 − 19 = R$ 12."},{"area":"Matemática","topic":"Ângulos","text":"No desenho de uma praça triangular, dois ângulos internos medem 48° e 67°. Qual é a medida do terceiro ângulo?","visual":"<div class=\"visual triangle\"><svg viewBox=\"0 0 300 220\" role=\"img\" aria-label=\"Triângulo com ângulos internos de 48 graus, 67 graus e um ângulo desconhecido\">\n<path d=\"M30 195 L270 195 L193 14 Z\" fill=\"#fff0dc\" stroke=\"#c66b12\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/>\n<path d=\"M61 195 A31 31 0 0 0 50.7 172\" fill=\"none\" stroke=\"#3577b8\" stroke-width=\"2.5\"/>\n<path d=\"M239 195 A31 31 0 0 0 258.0 166.4\" fill=\"none\" stroke=\"#3577b8\" stroke-width=\"2.5\"/>\n<text x=\"66\" y=\"181\" font-size=\"14\" font-weight=\"700\" fill=\"#173d60\">48°</text>\n<text x=\"218\" y=\"181\" font-size=\"14\" font-weight=\"700\" fill=\"#173d60\">67°</text>\n<text x=\"177\" y=\"54\" font-size=\"16\" font-weight=\"700\" fill=\"#a95000\">?</text>\n</svg><small>Os dois ângulos conhecidos são internos ao triângulo.</small></div>","options":["55°","65°","75°","85°"],"answer":1,"explanation":"A soma dos ângulos internos de um triângulo é 180°. Logo, 180 − 48 − 67 = 65°."},{"area":"Matemática","topic":"Área de figuras planas","text":"Um canteiro retangular mede 12 m de comprimento e 7 m de largura. Dentro dele, será reservado um canteiro quadrado de 3 m de lado; todo o restante receberá grama. Qual área será coberta com grama?","visual":"","options":["75 m²","84 m²","93 m²","96 m²"],"answer":0,"explanation":"Área total: 12 × 7 = 84 m². Canteiro: 3 × 3 = 9 m². Grama: 84 − 9 = 75 m²."},{"area":"Matemática","topic":"Relações métricas","text":"Uma rampa forma a hipotenusa de um triângulo retângulo. A altura vertical é 0,9 m e a distância horizontal é 1,2 m. Qual é o comprimento da rampa?","visual":"<div class=\"visual\"><svg viewBox=\"0 0 280 135\" role=\"img\" aria-label=\"Triângulo retângulo de base 1,2 e altura 0,9\"><path d=\"M25 110 L235 110 L235 20 Z\" fill=\"#e7f1ff\" stroke=\"#356db5\" stroke-width=\"2\"/><path d=\"M220 110 L220 95 L235 95\" fill=\"none\" stroke=\"#356db5\"/><text x=\"100\" y=\"127\">1,2 m</text><text x=\"238\" y=\"70\">0,9 m</text><text x=\"105\" y=\"55\">?</text></svg></div>","options":["1,3 m","1,5 m","1,8 m","2,1 m"],"answer":1,"explanation":"Pelo teorema de Pitágoras: c² = 1,2² + 0,9² = 1,44 + 0,81 = 2,25; c = 1,5 m."},{"area":"Português","topic":"Gênero textual e finalidade","text":"Leia o cartaz produzido pelo grêmio para incentivar a economia de água. Qual é a principal finalidade do texto?","visual":"<div class=\"poster\"><div class=\"poster-top\">CADA GOTA CONTA!</div><div class=\"poster-drop\">💧</div><p>Feche a torneira enquanto escova os dentes.</p><b>Economize água hoje. Preserve o amanhã.</b></div>","options":["Narrar uma história fictícia sobre a água.","Convencer o público a adotar um hábito de economia.","Apresentar resultados de uma pesquisa científica.","Ensinar a construir um sistema de irrigação."],"answer":1,"explanation":"O cartaz usa frases diretas e um apelo ao leitor para estimular uma atitude: economizar água."},{"area":"Português","topic":"Informação explícita","text":"Um aviso da biblioteca diz: “Durante a semana de provas, a biblioteca ficará aberta até as 20h, de segunda a quinta-feira.” Até que horário ela funcionará nesses dias?","visual":"<div class=\"visual noticecard\"><b>AVISO — BIBLIOTECA</b><p>Segunda a quinta-feira</p><div class=\"bigtime\">Até 20h</div><small>Semana de provas</small></div>","options":["18h","19h","20h","21h"],"answer":2,"explanation":"A informação está explícita no aviso: a biblioteca ficará aberta até as 20h."},{"area":"Português","topic":"Inferência","text":"Leia a mensagem: “O pátio está cheio de poças, os estudantes entram com os guarda-chuvas fechados e o céu continua escuro.” O que se pode inferir?","visual":"<div class=\"visual weather\"><div>☁️ ☁️ ☁️</div><div class=\"rain\">☔ ☔ ☔</div><small>Descrição de uma cena escolar</small></div>","options":["A escola está em férias.","Acabou de ocorrer ou está ocorrendo chuva.","O pátio foi lavado para uma festa.","O dia está muito quente e seco."],"answer":1,"explanation":"Poças, guarda-chuvas e céu escuro são pistas que sustentam a inferência de chuva."},{"area":"Português","topic":"Fato e opinião","text":"Em uma notícia sobre a feira de ciências, qual trecho expressa uma opinião?","visual":"<div class=\"visual clipping\"><b>FEIRA DE CIÊNCIAS RECEBE 300 VISITANTES</b><p>A exposição ocorreu na sexta-feira, no ginásio da escola.</p><p>“Foi a feira mais interessante do ano”, afirmou uma visitante.</p></div>","options":["A feira ocorreu na sexta-feira.","O evento aconteceu no ginásio.","A exposição recebeu 300 visitantes.","Foi a feira mais interessante do ano."],"answer":3,"explanation":"A expressão “mais interessante” apresenta avaliação pessoal, portanto é opinião."},{"area":"Português","topic":"Coesão referencial","text":"Leia: “A turma organizou uma campanha de reciclagem. Ela arrecadou 120 kg de materiais.” A palavra “Ela” retoma:","visual":"<div class=\"visual textsample\">A turma organizou uma campanha de reciclagem.<br><mark>Ela</mark> arrecadou 120 kg de materiais.</div>","options":["A turma","A campanha de reciclagem","A reciclagem como conceito","A quantidade de materiais"],"answer":1,"explanation":"“Ela” retoma “uma campanha de reciclagem”, núcleo do assunto da segunda frase."},{"area":"Português","topic":"Conectivos","text":"Leia: “A equipe separou os resíduos corretamente, <b>por isso</b> o material pôde ser reciclado.” A expressão destacada indica:","visual":"<div class=\"visual textsample\">A equipe separou os resíduos corretamente, <mark>por isso</mark> o material pôde ser reciclado.</div>","options":["Oposição","Dúvida","Consequência","Comparação"],"answer":2,"explanation":"“Por isso” liga a ação ao resultado obtido, expressando consequência."},{"area":"Português","topic":"Sentido contextual","text":"Em uma reportagem, lê-se: “A praça ganhou vida depois da reforma.” Nesse contexto, a expressão significa que a praça:","visual":"<div class=\"visual quote\">“A praça ganhou vida depois da reforma.”<small>Trecho de reportagem comunitária</small></div>","options":["passou a respirar biologicamente.","foi transformada em um ser vivo.","ficou mais movimentada e utilizada pelas pessoas.","foi retirada do bairro."],"answer":2,"explanation":"“Ganhou vida” é uma expressão figurada para indicar maior movimento e uso do espaço."},{"area":"Português","topic":"Pontuação","text":"Observe o aviso: “Atenção, estudantes: tragam caderno, lápis e régua.” Os dois-pontos foram usados para:","visual":"<div class=\"visual noticecard\"><b>ATENÇÃO, ESTUDANTES:</b><p>Tragam caderno, lápis e régua.</p></div>","options":["indicar uma pergunta direta.","introduzir uma lista de itens.","marcar o fim de uma frase.","separar o sujeito do verbo."],"answer":1,"explanation":"Os dois-pontos anunciam a enumeração dos materiais solicitados."},{"area":"Português","topic":"Acentuação","text":"No cartaz “A água é essencial à vida”, a palavra “água” é acentuada porque:","visual":"<div class=\"visual poster blue\"><div class=\"poster-top\">A ÁGUA É ESSENCIAL À VIDA</div><div class=\"poster-drop\">💧</div><p>Use com responsabilidade.</p></div>","options":["todas as palavras terminadas em a recebem acento.","é uma paroxítona terminada em ditongo oral.","é uma oxítona terminada em a.","o acento marca uma sílaba tônica final."],"answer":1,"explanation":"“Água” é proparoxítona? A divisão é á-gua: a palavra é paroxítona terminada em ditongo crescente, tradicionalmente acentuada."},{"area":"Português","topic":"Classes gramaticais","text":"No slogan “Cuide do nosso planeta”, a palavra “nosso” é:","visual":"<div class=\"visual slogan\">CUIDE DO <span>nosso</span> PLANETA 🌎</div>","options":["verbo","pronome possessivo","advérbio","preposição"],"answer":1,"explanation":"“Nosso” indica posse/pertencimento e acompanha o substantivo “planeta”; é pronome possessivo."},{"area":"Português","topic":"Concordância verbal","text":"Um comunicado informa: “Os estudantes da equipe ______ os cartazes hoje.” Qual forma verbal completa corretamente a frase?","visual":"<div class=\"visual textsample\">Os estudantes da equipe ______ os cartazes hoje.</div>","options":["produziu","produziram","produz","produzirá"],"answer":1,"explanation":"O sujeito “os estudantes” está no plural; o verbo deve concordar: “produziram”."},{"area":"Português","topic":"Formação de palavras","text":"A palavra “desleal”, usada em uma crítica ao jogo, foi formada por:","visual":"<div class=\"visual wordbuild\"><span>DES-</span><b>+</b><span>LEAL</span><b>→</b><strong>DESLEAL</strong></div>","options":["composição por justaposição.","derivação prefixal.","derivação sufixal.","abreviação."],"answer":1,"explanation":"O prefixo “des-” foi acrescentado à palavra “leal”, formando “desleal”."},{"area":"Português","topic":"Figuras de linguagem","text":"Em um poema sobre o calor, lê-se: “O sol abraçou a cidade.” A expressão destaca:","visual":"<div class=\"visual quote sun\">“O sol abraçou a cidade.” ☀️<small>Verso de um poema</small></div>","options":["uma personificação, atribuindo ação humana ao sol.","uma comparação explícita com uso de “como”.","uma descrição científica literal.","uma ironia baseada em oposição."],"answer":0,"explanation":"O sol recebe uma ação humana, “abraçar”; isso caracteriza personificação ou prosopopeia."},{"area":"Português","topic":"Tipologia textual","text":"Leia o trecho: “Misture a farinha e a água. Depois, amasse até obter uma massa uniforme.” Predomina a tipologia:","visual":"<div class=\"visual recipe\"><b>PASSO A PASSO</b><ol><li>Misture a farinha e a água.</li><li>Amasse até obter uma massa uniforme.</li></ol></div>","options":["narrativa","injuntiva","descritiva","argumentativa"],"answer":1,"explanation":"O texto orienta o leitor a realizar ações por meio de verbos no imperativo."},{"area":"Português","topic":"Ambiguidade","text":"A frase “Vi o estudante com o telescópio” pode ter dois sentidos. Qual elemento causa a ambiguidade?","visual":"<div class=\"visual textsample\">Vi o estudante com o telescópio.</div>","options":["O verbo “vi” está no passado.","Não se sabe se o estudante ou quem observa está com o telescópio.","A frase não apresenta sujeito.","A palavra “estudante” é plural."],"answer":1,"explanation":"O trecho “com o telescópio” pode indicar o instrumento usado por quem observa ou algo que o estudante portava."},{"area":"Português","topic":"Relação de contraste","text":"Leia: “A coleta seletiva exige organização; entretanto, reduz o desperdício.” O conectivo “entretanto” estabelece relação de:","visual":"<div class=\"visual textsample\">A coleta seletiva exige organização; <mark>entretanto</mark>, reduz o desperdício.</div>","options":["adição","explicação","contraste","conclusão"],"answer":2,"explanation":"“Entretanto” é uma conjunção adversativa, que introduz uma ideia de contraste."},{"area":"Português","topic":"Gênero notícia","text":"Qual característica é mais comum em uma notícia jornalística?","visual":"<div class=\"visual clipping\"><b>ESCOLA INAUGURA HORTA COMUNITÁRIA</b><p>Projeto começou nesta terça e envolve 80 estudantes.</p><small>Educação • Comunidade</small></div>","options":["Apresentar instruções culinárias em etapas.","Relatar um acontecimento de interesse público.","Expressar apenas sentimentos pessoais em versos.","Defender uma tese sem apresentar fatos."],"answer":1,"explanation":"A notícia informa um acontecimento de interesse coletivo, com dados sobre o evento."},{"area":"Português","topic":"Pronome e coesão","text":"Leia: “Os livros foram entregues à biblioteca, que os catalogará amanhã.” A palavra “os” retoma:","visual":"<div class=\"visual textsample\">Os livros foram entregues à biblioteca, que <mark>os</mark> catalogará amanhã.</div>","options":["os estudantes","os livros","a biblioteca","amanhã"],"answer":1,"explanation":"O pronome oblíquo “os” substitui “os livros”, evitando repetição."},{"area":"Português","topic":"Interpretação de gráfico","text":"O gráfico apresenta a preferência de leitura de uma turma. Qual gênero recebeu mais votos?","visual":"<div class=\"visual\"><b>Gêneros preferidos na turma</b><div class=\"barrow\"><span>Contos</span><div class=\"track\"><i style=\"width:70%\"></i></div><b>14</b></div><div class=\"barrow\"><span>Poemas</span><div class=\"track\"><i style=\"width:40%;background:#3577b8\"></i></div><b>8</b></div><div class=\"barrow\"><span>Crônicas</span><div class=\"track\"><i style=\"width:55%;background:#27805a\"></i></div><b>11</b></div></div>","options":["Poemas","Crônicas","Contos","Todos receberam o mesmo número."],"answer":2,"explanation":"Contos recebeu 14 votos, maior quantidade entre as três categorias."},{"area":"Português","topic":"Intenção comunicativa","text":"Um anúncio diz: “Traga sua garrafa reutilizável. Menos descartáveis, mais futuro!” Qual estratégia predomina?","visual":"<div class=\"visual poster green\"><div class=\"poster-top\">MENOS DESCARTÁVEIS,<br>MAIS FUTURO!</div><p>Traga sua garrafa reutilizável.</p><div class=\"poster-drop\">♻</div></div>","options":["Convocar o leitor a mudar um hábito com apelo ambiental.","Narrar uma experiência do passado.","Definir tecnicamente um polímero.","Divulgar resultados eleitorais."],"answer":0,"explanation":"O anúncio usa imperativo e slogan para persuadir o leitor a adotar um comportamento sustentável."},{"area":"Conhecimentos Gerais — Ciências da Natureza","topic":"Cadeia alimentar","text":"Em um manguezal, o esquema representa uma cadeia alimentar. Se a população de caranguejos cair muito, qual efeito é plausível para os animais que se alimentam deles?","visual":"<div class=\"visual foodchain\"><span>Folhas</span><b>→</b><span>Caranguejo</span><b>→</b><span>Garça</span><small>Produtor → consumidor → consumidor</small></div>","options":["A garça pode ter menos alimento disponível.","As folhas deixam de realizar fotossíntese imediatamente.","O caranguejo passa a ser produtor.","A cadeia alimentar deixa de depender de energia."],"answer":0,"explanation":"A redução dos caranguejos pode diminuir o alimento disponível para a garça, afetando a cadeia alimentar."},{"area":"Conhecimentos Gerais — Ciências da Natureza","topic":"Poluição da água","text":"Após chuva forte, uma lagoa recebe esgoto e fertilizantes. Dias depois, ocorre grande proliferação de algas e queda de oxigênio. Esse processo é chamado de:","visual":"<div class=\"visual stages\"><span>Entrada de nutrientes</span> → <span>Proliferação de algas</span> → <span>Queda de O₂</span></div>","options":["condensação","eutrofização","evaporação","infiltração"],"answer":1,"explanation":"O excesso de nutrientes favorece algas; sua decomposição consome oxigênio, caracterizando eutrofização."},{"area":"Conhecimentos Gerais — Ciências da Natureza","topic":"Vacinas","text":"Uma campanha de vacinação busca preparar o organismo para reconhecer um agente infeccioso. Qual é o princípio básico das vacinas?","visual":"<div class=\"visual immune\"><div>Vacina</div><b>→</b><div>Memória imunológica</div><b>→</b><div>Resposta mais rápida</div></div>","options":["Substituir permanentemente todos os glóbulos brancos.","Estimular o sistema imunológico a desenvolver memória contra o agente.","Impedir qualquer tipo de infecção em todas as pessoas.","Eliminar a necessidade de saneamento básico."],"answer":1,"explanation":"Vacinas estimulam a resposta imune e a formação de memória imunológica, reduzindo o risco de doença grave."},{"area":"Conhecimentos Gerais — Ciências da Natureza","topic":"Célula vegetal","text":"A imagem esquemática mostra uma célula vegetal. Qual estrutura está relacionada diretamente à fotossíntese?","visual":"<div class=\"visual cell\"><div class=\"cellwall\"><span class=\"nucleus\">Núcleo</span><span class=\"chloroplast\">Cloroplasto</span><span class=\"vacuole\">Vacúolo</span></div><small>Esquema simplificado de célula vegetal</small></div>","options":["Núcleo","Cloroplasto","Vacúolo","Membrana nuclear"],"answer":1,"explanation":"A fotossíntese ocorre nos cloroplastos, que contêm clorofila e captam energia luminosa."},{"area":"Conhecimentos Gerais — Ciências da Natureza","topic":"Sistema respiratório","text":"Durante uma corrida, a frequência respiratória aumenta. Qual é a principal razão fisiológica para isso?","visual":"<div class=\"visual lungs\">🫁<p>Mais atividade muscular → maior demanda de O₂ e produção de CO₂</p></div>","options":["Diminuir a circulação sanguínea.","Atender à maior demanda de oxigênio e eliminar mais gás carbônico.","Impedir que o corpo produza energia.","Reduzir a temperatura a zero."],"answer":1,"explanation":"Os músculos ativos usam mais oxigênio e produzem mais CO₂; a ventilação aumenta para atender a essa demanda."},{"area":"Conhecimentos Gerais — Ciências da Natureza","topic":"Hereditariedade","text":"Em uma espécie de planta, a cor roxa (R) é dominante sobre a branca (r). No cruzamento Rr × rr, qual porcentagem esperada de descendentes terá flores brancas?","visual":"<div class=\"visual punnett\"><table><tr><th></th><th>r</th><th>r</th></tr><tr><th>R</th><td>Rr</td><td>Rr</td></tr><tr><th>r</th><td>rr</td><td>rr</td></tr></table></div>","options":["0%","25%","50%","100%"],"answer":2,"explanation":"O cruzamento produz, em média, 50% Rr (roxas) e 50% rr (brancas)."},{"area":"Conhecimentos Gerais — Ciências da Natureza","topic":"Seleção natural","text":"Em uma região escura, alguns insetos são mais escuros e ficam menos visíveis aos predadores. Ao longo de muitas gerações, a proporção desses insetos aumenta. A situação exemplifica:","visual":"<div class=\"visual moths\"><span>Fundo escuro</span><div class=\"mothrow\"><b>●</b><b>●</b><b>○</b><b>●</b><b>○</b></div><small>Indivíduos mais camuflados podem sobreviver e reproduzir-se mais.</small></div>","options":["seleção natural","uso e desuso individual","geração espontânea","ausência de hereditariedade"],"answer":0,"explanation":"Indivíduos com característica vantajosa no ambiente tendem a sobreviver e deixar mais descendentes."},{"area":"Conhecimentos Gerais — Geografia","topic":"Escala cartográfica","text":"Em um mapa, 1 cm representa 5 km na realidade. Duas cidades estão separadas por 3,4 cm no mapa. Qual é a distância real?","visual":"<div class=\"visual mapline\"><span> Cidade A</span><div class=\"maproad\"></div><span>Cidade B</span><small>Escala: 1 cm = 5 km • Distância no mapa: 3,4 cm</small></div>","options":["8,4 km","15 km","17 km","34 km"],"answer":2,"explanation":"A distância real é 3,4 × 5 = 17 km."},{"area":"Conhecimentos Gerais — Geografia","topic":"Movimentos da Terra","text":"A alternância entre dia e noite ocorre principalmente porque a Terra:","visual":"<div class=\"visual earth\"><div class=\"earthcircle\"><span>☀️</span></div><small>Rotação: movimento da Terra em torno do próprio eixo</small></div>","options":["gira em torno do próprio eixo.","gira ao redor da Lua.","fica parada e o Sol gira ao seu redor.","muda de tamanho ao longo do dia."],"answer":0,"explanation":"A rotação terrestre provoca a alternância entre a parte iluminada e a parte escura do planeta."},{"area":"Conhecimentos Gerais — Geografia","topic":"Clima e vegetação","text":"O gráfico mostra chuvas mensais em uma área semiárida. Qual característica é sugerida pelos dados?","visual":"<div class=\"visual\"><b>Precipitação mensal (mm)</b><div class=\"bars\"><span style=\"height:20%\"><i>Jan</i></span><span style=\"height:35%\"><i>Fev</i></span><span style=\"height:60%\"><i>Mar</i></span><span style=\"height:45%\"><i>Abr</i></span><span style=\"height:15%\"><i>Mai</i></span><span style=\"height:8%\"><i>Jun</i></span><span style=\"height:5%\"><i>Jul</i></span><span style=\"height:4%\"><i>Ago</i></span></div><small>Valores ilustrativos para leitura do padrão anual</small></div>","options":["Chuvas abundantes e uniformes em todos os meses.","Período chuvoso concentrado e meses muito secos.","Ausência de qualquer variação sazonal.","Clima polar durante o ano inteiro."],"answer":1,"explanation":"O gráfico apresenta concentração de chuva em alguns meses e estiagem em outros, padrão de sazonalidade semiárida."},{"area":"Conhecimentos Gerais — Geografia","topic":"Urbanização","text":"Uma cidade amplia bairros sem rede de esgoto, transporte suficiente ou drenagem. Qual problema urbano pode se intensificar?","visual":"<div class=\"visual city\"><div class=\"buildings\"><i></i><i></i><i></i><i></i></div><div class=\"street\">Rua • drenagem insuficiente • moradias</div></div>","options":["Redução automática da população urbana.","Desigualdade socioespacial e riscos de alagamento.","Fim do trânsito e da poluição.","Aumento inevitável das áreas verdes."],"answer":1,"explanation":"A expansão sem infraestrutura pode ampliar desigualdades, alagamentos e problemas de saneamento."},{"area":"Conhecimentos Gerais — Geografia","topic":"Mudanças climáticas","text":"Uma escola substitui lâmpadas antigas por LED e incentiva o transporte coletivo. Essas ações contribuem para:","visual":"<div class=\"visual actioncards\"><div>💡<b>LED</b><small>Menor consumo</small></div><div>🚌<b>Transporte coletivo</b><small>Menos emissões por pessoa</small></div></div>","options":["aumentar o consumo de combustíveis fósseis.","reduzir o consumo de energia e as emissões associadas.","interromper completamente o aquecimento global em um dia.","eliminar a necessidade de planejamento ambiental."],"answer":1,"explanation":"Eficiência energética e transporte coletivo podem reduzir o consumo e as emissões de gases de efeito estufa."},{"area":"Conhecimentos Gerais — Geografia","topic":"Energia","text":"Uma comunidade tem muitas horas de sol ao longo do ano e instala painéis fotovoltaicos. A fonte de energia utilizada é:","visual":"<div class=\"visual solar\"><div class=\"sunicon\">☀</div><div class=\"panelgrid\">▦ ▦ ▦<br>▦ ▦ ▦</div><b>Luz solar → eletricidade</b></div>","options":["carvão mineral","energia solar","gás natural","energia geotérmica"],"answer":1,"explanation":"Painéis fotovoltaicos convertem a energia da luz solar em energia elétrica."},{"area":"Conhecimentos Gerais — Geografia","topic":"Globalização","text":"Uma camiseta é desenhada no Brasil, produzida com tecido asiático e vendida pela internet em vários países. O exemplo evidencia:","visual":"<div class=\"visual flowmap\"><span>Brasil<br><small>Design</small></span><b>→</b><span>Ásia<br><small>Matéria-prima</small></span><b>→</b><span>Vários países<br><small>Venda</small></span></div>","options":["isolamento econômico total.","integração de etapas produtivas entre diferentes países.","fim das trocas comerciais.","produção restrita ao mercado local."],"answer":1,"explanation":"A cadeia produtiva envolve diferentes países, mostrando a integração econômica global."},{"area":"Conhecimentos Gerais — História","topic":"Segunda Guerra Mundial","text":"Um painel histórico apresenta a sequência 1939–1945 e imagens de destruição, deslocamentos populacionais e campos de concentração. Qual acontecimento corresponde ao período?","visual":"<div class=\"visual timeline\"><span>1939</span><div></div><span>1945</span><small>Início e fim da Segunda Guerra Mundial</small></div>","options":["Revolução Francesa","Segunda Guerra Mundial","Guerra do Paraguai","Independência do Brasil"],"answer":1,"explanation":"A Segunda Guerra Mundial ocorreu entre 1939 e 1945 e provocou destruição e graves violações de direitos humanos."},{"area":"Conhecimentos Gerais — História","topic":"Holocausto e direitos humanos","text":"Após a Segunda Guerra Mundial, a criação da ONU e a discussão internacional sobre direitos humanos buscaram, entre outros objetivos:","visual":"<div class=\"visual document\"><b>1945 — Organização das Nações Unidas</b><p>Cooperação internacional, paz e segurança coletiva.</p><div class=\"stamp\">DIREITOS HUMANOS</div></div>","options":["legitimar perseguições étnicas.","fortalecer a cooperação internacional e prevenir novas atrocidades.","restabelecer o absolutismo europeu.","abolir toda forma de organização internacional."],"answer":1,"explanation":"A ONU foi criada em 1945 para promover cooperação, paz e segurança; o pós-guerra fortaleceu debates sobre direitos humanos."},{"area":"Conhecimentos Gerais — História","topic":"Guerra Fria","text":"Durante a Guerra Fria, Estados Unidos e União Soviética disputaram influência política, militar, tecnológica e ideológica. Um exemplo dessa disputa foi:","visual":"<div class=\"visual coldwar\"><div><b>EUA</b><small>Bloco capitalista</small></div><strong>⇄</strong><div><b>URSS</b><small>Bloco socialista</small></div><p>Corrida armamentista e espacial</p></div>","options":["a corrida espacial.","a unificação política dos dois países.","a ausência de competição militar.","a dissolução imediata da ONU."],"answer":0,"explanation":"A corrida espacial foi uma das expressões da rivalidade tecnológica e ideológica entre as superpotências."},{"area":"Conhecimentos Gerais — História","topic":"Descolonização","text":"Após 1945, diversos países da África e da Ásia conquistaram independência. Esse processo ficou conhecido como:","visual":"<div class=\"visual timeline\"><span>Domínio colonial</span><div></div><span>Independências</span><small>Fortalecimento de movimentos nacionalistas no pós-guerra</small></div>","options":["Renascimento","Descolonização","Feudalização","Mercantilismo"],"answer":1,"explanation":"A descolonização foi o processo de independência de territórios antes dominados por potências coloniais."},{"area":"Conhecimentos Gerais — História","topic":"Ditadura civil-militar","text":"Em regimes autoritários, a censura pode impedir a circulação de notícias e críticas ao governo. Qual direito é diretamente limitado por essa prática?","visual":"<div class=\"visual newspaper\"><b>JORNAL CENSURADO</b><p>████████████████</p><p>██████████</p><small>Trecho ilustrativo sobre censura</small></div>","options":["Liberdade de expressão e de imprensa.","Direito à alimentação exclusivamente.","Direito ao lazer apenas.","Liberdade de circulação de mercadorias."],"answer":0,"explanation":"A censura limita a divulgação de ideias e informações, atingindo a liberdade de expressão e de imprensa."},{"area":"Conhecimentos Gerais — História","topic":"Constituição de 1988","text":"A Constituição brasileira promulgada em 1988 ficou conhecida como Constituição Cidadã por ampliar a proteção de direitos e garantias. Esse marco está associado ao processo de:","visual":"<div class=\"visual document\"><b>1988</b><p>Constituição Federal</p><div class=\"stamp\">CIDADANIA • DIREITOS • DEMOCRACIA</div></div>","options":["redemocratização do Brasil.","início da colonização portuguesa.","instalação do Estado Novo em 1937.","início da Segunda Guerra Mundial."],"answer":0,"explanation":"A Constituição de 1988 foi promulgada no processo de redemocratização e consolidou direitos e garantias fundamentais."}];
+const colors=["#f58220","#3577b8","#27805a"];
+const root=document.getElementById("questions");
+function areaLabel(a){return a.startsWith("Conhecimentos Gerais")?"Conhecimentos Gerais":a}
+function renderQuestions(){
+ let html="", last="";
+ qs.forEach((q,i)=>{
+   const group=areaLabel(q.area);
+   if(group!==last){html+=`<div class="section-title"><h2>${group}</h2></div>`;last=group}
+   html+=`<article class="question" id="q${i}"><h3>Questão ${i+1}</h3><p class="prompt">${q.text}</p>${q.visual}<div class="options">${q.options.map((op,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}"><span><b>${String.fromCharCode(65+j)})</b> ${op}</span></label>`).join("")}</div><div class="comment" id="c${i}"></div></article>`;
+ });
+ root.innerHTML=html;
 }
-
-function grade() {
-  let score = 0;
-  let answered = 0;
-  const byArea = {};
-  const byTopic = {};
-
-  areas.forEach(a => {
-    byArea[a] = { right: 0, total: 0 };
-  });
-
-  qs.forEach((q, i) => {
-    byArea[q.area].total++;
-    if (!byTopic[q.topic]) {
-      byTopic[q.topic] = {
-        right: 0, total: 0, area: q.area
-      };
-    }
-    byTopic[q.topic].total++;
-
-    const selected = document.querySelector(
-      `input[name="q${i}"]:checked`
-    );
-    const comment = document.getElementById("c" + i);
-    const ok = selected && Number(selected.value) === q.answer;
-
-    if (selected) answered++;
-    if (ok) {
-      score++;
-      byArea[q.area].right++;
-      byTopic[q.topic].right++;
-    }
-
-    comment.style.display = "block";
-    comment.className = "comment " + (ok ? "" : "wrong");
-    comment.innerHTML = `
-      <div class="${ok ? "correctline" : "incorrectline"}">
-        ${ok ? "Resposta correta!" :
-          "Resposta correta: " +
-          String.fromCharCode(65 + q.answer) +
-          ") " + q.options[q.answer]}
-      </div>
-      <p>${q.explanation}</p>`;
-  });
-
-  document.getElementById("results").style.display = "block";
-  document.getElementById("totalScore").textContent =
-    score + "/" + qs.length;
-  document.getElementById("percent").textContent =
-    Math.round(score / qs.length * 100) + "%";
-  document.getElementById("answered").textContent =
-    answered + "/" + qs.length;
-  document.getElementById("greeting").textContent =
-    "Você acertou " + score + " de " + qs.length + " questões.";
-
-  drawChart(areas.map(a => byArea[a].right));
-  document.getElementById("legend").innerHTML =
-    areas.map((a, i) => `
-      <p><span class="swatch" style="background:${colors[i]}"></span>
-      ${a}: ${byArea[a].right}/${byArea[a].total}</p>
-    `).join("");
-
-  document.getElementById("areaResults").innerHTML =
-    areas.map((a, i) => `
-      <p><b>${a}: ${byArea[a].right}/${byArea[a].total}</b></p>
-      <div class="bar">
-        <span style="width:${
-          byArea[a].right / byArea[a].total * 100
-        }%;background:${colors[i]}"></span>
-      </div>
-    `).join("");
-
-  const topics = Object.entries(byTopic).sort(
-    (a, b) =>
-      b[1].right / b[1].total -
-      a[1].right / a[1].total
-  );
-
-  const strong = topics.filter(
-    x => x[1].right / x[1].total >= 0.75
-  );
-  const weak = topics.filter(
-    x => x[1].right / x[1].total < 0.75
-  );
-
-  document.getElementById("strengths").innerHTML =
-    strong.length
-      ? "<ul>" + strong.map(([t, v]) =>
-          `<li>${t}: ${v.right}/${v.total}</li>`
-        ).join("") + "</ul>"
-      : "<p>Revise os fundamentos de todas as áreas.</p>";
-
-  document.getElementById("weaknesses").innerHTML =
-    weak.length
-      ? "<ul>" + weak.map(([t, v]) =>
-          `<li>${t}: ${v.right}/${v.total}</li>`
-        ).join("") + "</ul>"
-      : "<p>Bom desempenho em todos os conteúdos!</p>";
-
-  document.getElementById("studyPlan").innerHTML = `
-    <ol>
-      <li>Comece pelos conteúdos com menor percentual de acertos.</li>
-      <li>Revise a teoria e resolva exercícios contextualizados.</li>
-      <li>Registre os erros e refaça as questões depois de sete dias.</li>
-      <li>Alterne Matemática, Português e Conhecimentos Gerais.</li>
-    </ol>`;
-
-  document.getElementById("results").scrollIntoView({
-    behavior: "smooth"
-  });
+function grade(){
+ let score=0,answered=0;const byArea={};const byTopic={};
+ ["Matemática","Português","Conhecimentos Gerais"].forEach(a=>byArea[a]={right:0,total:0});
+ qs.forEach((q,i)=>{
+  const area=areaLabel(q.area);byArea[area].total++;
+  if(!byTopic[q.topic])byTopic[q.topic]={right:0,total:0,area};byTopic[q.topic].total++;
+  const sel=document.querySelector(`input[name="q${i}"]:checked`),c=document.getElementById("c"+i);
+  const ok=!!sel&&Number(sel.value)===q.answer;if(sel)answered++;
+  if(ok){score++;byArea[area].right++;byTopic[q.topic].right++}
+  c.style.display="block";c.className="comment "+(ok?"":"wrong");
+  c.innerHTML=`<div class="${ok?"good":"bad"}">${ok?"Resposta correta!":"Resposta correta: "+String.fromCharCode(65+q.answer)+") "+q.options[q.answer]}</div><p>${q.explanation}</p>`;
+ });
+ document.getElementById("results").style.display="block";
+ document.getElementById("totalScore").textContent=score+"/"+qs.length;
+ document.getElementById("percent").textContent=Math.round(score/qs.length*100)+"%";
+ document.getElementById("answered").textContent=answered+"/"+qs.length;
+ document.getElementById("greeting").textContent=`Você acertou ${score} de ${qs.length} questões. ${answered<qs.length?"Há "+(qs.length-answered)+" questão(ões) sem resposta.":""}`;
+ const reportAreas=["Matemática","Português","Conhecimentos Gerais"];
+ const vals=reportAreas.map(a=>byArea[a].right);
+ drawChart(vals);
+ document.getElementById("legend").innerHTML=reportAreas.map((a,i)=>`<p><span class="swatch" style="background:${colors[i]}"></span>${a}: ${byArea[a].right}/${byArea[a].total} (${Math.round(byArea[a].right/byArea[a].total*100)}%)</p>`).join("");
+ document.getElementById("areaResults").innerHTML=reportAreas.map((a,i)=>`<p><b>${a}: ${byArea[a].right}/${byArea[a].total}</b></p><div class="bar"><span style="width:${byArea[a].right/byArea[a].total*100}%;background:${colors[i]}"></span></div>`).join("");
+ const topics=Object.entries(byTopic).sort((a,b)=>b[1].right/b[1].total-a[1].right/a[1].total);
+ const strong=topics.filter(x=>x[1].right/x[1].total>=.75),weak=topics.filter(x=>x[1].right/x[1].total<.75);
+ document.getElementById("strengths").innerHTML=strong.length?"<ul>"+strong.map(([t,v])=>`<li>${t}: ${v.right}/${v.total} acertos</li>`).join("")+"</ul>":"<p>Não há conteúdo com 75% ou mais de acertos ainda. Comece revisando os conceitos básicos e refaça o simulado.</p>";
+ document.getElementById("weaknesses").innerHTML=weak.length?"<ul>"+weak.map(([t,v])=>`<li>${t}: ${v.right}/${v.total} acertos (${Math.round(v.right/v.total*100)}%)</li>`).join("")+"</ul>":"<p>Excelente: todos os tópicos atingiram pelo menos 75% de acertos.</p>";
+ const weakest=topics.slice().reverse().slice(0,5).filter(x=>x[1].right/x[1].total<.75);
+ document.getElementById("studyPlan").innerHTML=`<ol>${weakest.length?weakest.map(([t,v])=>`<li><b>${t}:</b> retome a teoria, resolva 5 a 10 exercícios do mesmo tipo e explique em voz alta como chegou à resposta.</li>`).join(""):"<li>Mantenha a revisão espaçada e pratique questões mistas para consolidar os conteúdos.</li>"}<li>Priorize a disciplina com menor percentual no quadro acima.</li><li>Refaça as questões erradas em 48 horas e novamente após uma semana.</li><li>Treine leitura de tabelas, gráficos e enunciados antes de calcular ou escolher uma alternativa.</li></ol>`;
+ document.getElementById("results").scrollIntoView({behavior:"smooth"});
 }
-
-function drawChart(values) {
-  const canvas = document.getElementById("pie");
-  const ctx = canvas.getContext("2d");
-  const total = values.reduce((a, b) => a + b, 0) || 1;
-  let start = -Math.PI / 2;
-
-  ctx.clearRect(0, 0, 260, 260);
-
-  values.forEach((value, i) => {
-    const end = start + value / total * Math.PI * 2;
-    ctx.beginPath();
-    ctx.moveTo(130, 130);
-    ctx.arc(130, 130, 110, start, end);
-    ctx.closePath();
-    ctx.fillStyle = colors[i];
-    ctx.fill();
-    start = end;
-  });
+function drawChart(values){
+ const canvas=document.getElementById("pie"),ctx=canvas.getContext("2d"),total=values.reduce((a,b)=>a+b,0)||1;let start=-Math.PI/2;ctx.clearRect(0,0,230,230);
+ values.forEach((v,i)=>{const end=start+(v/total)*Math.PI*2;ctx.beginPath();ctx.moveTo(115,115);ctx.arc(115,115,95,start,end);ctx.closePath();ctx.fillStyle=colors[i];ctx.fill();start=end});
+ if(values.every(v=>v===0)){ctx.fillStyle="#555";ctx.font="14px Arial";ctx.textAlign="center";ctx.fillText("Responda às questões",115,115)}
 }
-
-function clearAll() {
-  document.querySelectorAll('input[type="radio"]')
-    .forEach(input => input.checked = false);
-  document.querySelectorAll(".comment")
-    .forEach(comment => comment.style.display = "none");
-  document.getElementById("results").style.display = "none";
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
+function clearAll(){document.querySelectorAll('input[type="radio"]').forEach(x=>x.checked=false);document.querySelectorAll(".comment").forEach(x=>x.style.display="none");document.getElementById("results").style.display="none";window.scrollTo({top:0,behavior:"smooth"})}
 renderQuestions();
 </script>
-</body>
-</html>
+</body></html>
